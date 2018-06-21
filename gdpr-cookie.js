@@ -320,7 +320,6 @@
 		$.each(myCookiePrefs, function(i, v) {
 		    if ($.gdprcookie.preference(v) === true) {
 		        $('script[type="text/plain"][data-gdprcookie="' + v + '"]').each(function() {
-
 					if ($(this).attr('src')) {
 						$(this).after('<script type="text/javascript" src="' + $(this).attr('src') + '"></script>');
 
@@ -329,7 +328,6 @@
 
 					}
                 });
-				// console.log([i,v]);
             }
 
         });
