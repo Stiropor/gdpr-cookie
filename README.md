@@ -199,7 +199,15 @@ When the visitor presses the accept button, the cookie `cookieControlPrefs` (nam
 
 One of the things you'll want to do, is conditionally render passages of html that do or don't comply with the visitor's preferences. I'd advice you to completely omit the html that doesn't comply, to make sure nothing of it gets loaded.
 
-Here's one way to do it in pure javascript:
+Here's one way to do it:
+
+```html
+<script type="text/plain" data-gdprcookie="marketing">
+    Some marketing html goes here
+</script>
+```
+
+Here's another way to do it in pure javascript:
 
 ```html
 <script>if ($.gdprcookie.preference("marketing")) { document.write(`

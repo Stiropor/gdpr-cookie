@@ -1,5 +1,10 @@
 # Changelog
 
+### Version 0.2.1
+
+* Merged PR [#4](https://github.com/thany/gdpr-cookie/pull/4) by [acoustep](https://github.com/acoustep)
+* Added option to auto-enable scripts with data-gdprcookie attribute
+
 ### Version 0.2.0
 
 * It now requires only a single cookie to function

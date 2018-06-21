@@ -1,6 +1,6 @@
 <meta charset=UTF-8>
 <title>GDPR 🍪</title>
-    
+
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Quicksand:400,500" rel=stylesheet>
 <link href=example.css rel=stylesheet>
 <link href=gdpr-cookie.css rel=stylesheet>
@@ -12,7 +12,7 @@
 
     <h2>Checkboxes</h2>
     <p>With the recent EU regulations, visitors must now explicitly opt-in to marketing, preferences, etc. You can customize which checkboxes are shown. The "Essential" checkbox can also be removed, e.g. when your site doesn't have any essential cookies but only marketing, etc.</p>
-    
+
     <h2>Re-show</h2>
     <p>Visitors must also be able to <a href="javascript:$.gdprcookie.display()">change their mind</a> and modify their cookie settings to allow more (or fewer) cookie types.</p>
 </main>
@@ -27,7 +27,7 @@
         expires: 1,
         acceptBtnLabel: "Accept cookies",
     });
-    
+
     $(document.body)
         .on("gdpr:show", function() {
             console.log("Cookie dialog is shown");
@@ -43,4 +43,8 @@
     if ($.gdprcookie.preference("marketing") === true) {
         console.log("This should run because marketing is accepted.");
     }
+</script>
+
+<script type="text/plain" data-gdprcookie="marketing">
+    console.log('This should show from <script> tag.');
 </script>
